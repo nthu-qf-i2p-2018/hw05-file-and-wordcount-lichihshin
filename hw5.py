@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[5]:
+# In[3]:
 
 
 import csv
@@ -21,7 +21,7 @@ def main(filename):
                 all_words.append(word)
     from collections import Counter
     counter=Counter(all_words)
-    with open("wordcount.csv","w") as csv_file:
+    with open("wordcount.csv","w", newline="") as csv_file:
                 
         writer= csv.writer(csv_file,delimiter=',')
         writer.writerow(['word','count'])
@@ -33,7 +33,8 @@ def main(filename):
         
     with open ('wordcount.pkl','wb') as pkl_file:
         pickle.dump(counter,pkl_file)
-        
+
+cake=input()   
 if __name__=='__main__':
-    main('C:\\Users\\User\\.ipynb_checkpoints\\i_have_a_dream.txt')
+    main(cake)
 
