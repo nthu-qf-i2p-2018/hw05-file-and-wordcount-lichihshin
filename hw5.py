@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[3]:
+# In[1]:
 
 
 import csv
@@ -17,7 +17,7 @@ def main(filename):
         words=line.split()
         for word in words:
             word=word.strip(string.punctuation)
-            if word !=(" "):
+            if word !=(""):
                 all_words.append(word)
     from collections import Counter
     counter=Counter(all_words)
